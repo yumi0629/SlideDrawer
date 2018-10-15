@@ -2,7 +2,7 @@
 
 A slide menu widget like QQ.
 
-The drawer can open from left,right,top or bottom. You can use ```slideDirection: SlideDirection.top,``` to control the direction.
+The drawer can open from left,right,top or bottom. You can use ```slideDirection: SlideDirection.top,``` to control the direction. Use ```_slideKey.currentState.openOrClose();```to open or close drawer freely.
 
 Usage:
 ```
@@ -21,10 +21,11 @@ SlideStack(
       ),
     );
 ```
-
+from left
 ![from left](https://github.com/yumi0629/SlideDrawer/blob/master/slide01.gif)
 
 ![from left](https://github.com/yumi0629/SlideDrawer/blob/master/slide02.gif)
 
+from top
 ![from top](https://github.com/yumi0629/SlideDrawer/blob/master/slide03.gif)
 
