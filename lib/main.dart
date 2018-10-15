@@ -58,7 +58,7 @@ class _State extends State<_Body> {
             ),
           ),
         ),
-        slideDirection: SlideDirection.top,
+        slideDirection: SlideDirection.left,
         onSlide: onSlide,
         drawerSize: maxSlideDistance,
         transform: Matrix4.translationValues(

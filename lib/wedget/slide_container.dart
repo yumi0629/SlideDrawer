@@ -11,15 +11,6 @@ enum SlideDirection {
   bottom,
 }
 
-/// Tell the Gesture Recognizers when the container can not be slide in this direction.
-enum SlideDirectionLock {
-  toLeft,
-  toRight,
-  toTop,
-  toBottom,
-  none,
-}
-
 class SlideStack extends StatefulWidget {
   /// The main widget.
   final SlideContainer child;
@@ -157,49 +148,6 @@ class ContainerState extends State<SlideContainer>
   // The translation offset of the container.(decides the position of the container)
   double get containerOffset =>
       animationController.value * maxDragDistance * dragTarget.sign;
-
-  SlideDirectionLock get lock {
-    switch (widget.slideDirection) {
-      case SlideDirection.left:
-        if (containerOffset == maxDragDistance) {
-          return SlideDirectionLock.toRight;
-        } else if (containerOffset == 0.0) {
-          return SlideDirectionLock.toLeft;
-        } else {
-          return SlideDirectionLock.none;
-        }
-        break;
-      case SlideDirection.right:
-        if (containerOffset.abs() == maxDragDistance) {
-          return SlideDirectionLock.toLeft;
-        } else if (containerOffset == 0.0) {
-          return SlideDirectionLock.toRight;
-        } else {
-          return SlideDirectionLock.none;
-        }
-        break;
-      case SlideDirection.top:
-        if (containerOffset == maxDragDistance) {
-          return SlideDirectionLock.toBottom;
-        } else if (containerOffset == 0.0) {
-          return SlideDirectionLock.toTop;
-        } else {
-          return SlideDirectionLock.none;
-        }
-        break;
-      case SlideDirection.bottom:
-        if (containerOffset.abs() == maxDragDistance) {
-          return SlideDirectionLock.toTop;
-        } else if (containerOffset == 0.0) {
-          return SlideDirectionLock.toBottom;
-        } else {
-          return SlideDirectionLock.none;
-        }
-        break;
-      default:
-        return SlideDirectionLock.none;
-    }
-  }
 
   @override
   void initState() {
