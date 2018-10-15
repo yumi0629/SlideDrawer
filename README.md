@@ -1,8 +1,10 @@
 # flutter_slide_drawer
 
-A new Flutter application.
+A slide menu widget like QQ.
 
-## Getting Started
+![](https://github.com/yumi0629/SlideDrawer/blob/master/slide01.gif)
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+![](https://github.com/yumi0629/SlideDrawer/blob/master/slide02.gif)
+
+![](https://github.com/yumi0629/SlideDrawer/blob/master/slide03.gif)
+
